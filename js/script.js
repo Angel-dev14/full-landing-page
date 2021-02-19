@@ -23,16 +23,8 @@ $(document).ready(function (){
             pageAnchorBuilder: false
         }
     });
-    if(window.innerWidth>767){
-        $(window).scroll(function () {
-            let top = $(window).scrollTop();
-            if (top >= 80) {
-                $("header").addClass("secondary");
-            } else if ($("header").hasClass("secondary")) {
-                $("header").removeClass("secondary");
-            }
-        })
-    }
+
+   
     $("input[type=checkbox]").click(function () {
         if ($(this).is(":checked")) {
             console.log("click")
@@ -55,6 +47,15 @@ $(document).ready(function (){
                     $("header").removeClass("secondary");
                 }
             })
+        }
+    })
+    
+    $(window).scroll(function () {
+        let top = $(window).scrollTop();
+        if (top >= 80) {
+            $("header").addClass("secondary");
+        } else if ($("header").hasClass("secondary")) {
+            $("header").removeClass("secondary");
         }
     })
 
