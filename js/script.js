@@ -23,8 +23,6 @@ $(document).ready(function (){
             pageAnchorBuilder: false
         }
     });
-
-   
     $("input[type=checkbox]").click(function () {
         if ($(this).is(":checked")) {
             console.log("click")
@@ -49,7 +47,6 @@ $(document).ready(function (){
             })
         }
     })
-    
     $(window).scroll(function () {
         let top = $(window).scrollTop();
         if (top >= 80) {
